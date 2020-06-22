@@ -1,0 +1,238 @@
+/* ---- variables ---- */
+
+$green: #99cc33;
+$red: red;
+$blueh4: #007cc2;
+$blueh2: #00659b;
+$blueSpan: #0098ce;
+$blackRgba: rgba(0, 0, 0, 0.1);
+$fontPage: "Source Sans Variable", sans-serif;
+
+/* ---- reset html ---- */
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: $fontPage;
+}
+
+/* ---- layout page ---- */
+
+body {
+  margin: 200px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 40px;
+
+  input {
+    width: 350px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid $green;
+    outline: none;
+    padding: 0 70px;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 10px;
+  }
+}
+
+.div-input-search {
+  position: relative;
+}
+
+section {
+  img {
+    position: absolute;
+    right: 18px;
+    top: 17px;
+    cursor: pointer;
+  }
+  button {
+    border: none;
+  }
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  margin: 100px;
+}
+
+main {
+  .div-name-date,
+  .div-price-order {
+    margin-bottom: 50px;
+  }
+
+  .div-name-date,
+  .div-date-order,
+  .div-price-order,
+  .div-situation-order {
+    text-align: center;
+  }
+}
+
+/* alert error */
+
+.main-alert-error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 80px;
+  color: $red;
+  display: none;
+
+  h2 {
+    margin: 20px;
+    font-size: 20px;
+  }
+}
+
+/* ---- tipograph ---- */
+
+section h4 {
+  color: $blueh4;
+  font-weight: 800;
+  font-style: italic;
+}
+
+main {
+  .div-name-date h2,
+  .div-date-order h2,
+  .div-price-order h2,
+  .div-situation-order h2 {
+    color: $blueh2;
+  }
+
+  .div-name-date span,
+  .div-date-order span,
+  .div-price-order span,
+  .div-situation-order span {
+    color: $blueSpan;
+  }
+}
+
+/* ---- spinner ---- */
+
+.div-spinner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #99cc33;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 50%;
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* ---- media queries ---- */
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 40px;
+  }
+
+  section {
+    margin-top: 40px;
+
+    h4 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 40px 10px 0px;
+  }
+
+  main .price-order {
+    display: none;
+  }
+
+  section input {
+    width: 300px;
+    padding: 0 45px;
+  }
+
+  .div-name-date h2,
+  .div-date-order h2,
+  .div-situation-order h2 {
+    font-size: 22px;
+  }
+
+  .main-alert-error {
+    margin-top: 20px;
+  }
+}

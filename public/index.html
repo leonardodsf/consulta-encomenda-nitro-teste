@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <title>Consulta Encomendas</title>
+  </head>
+  <body>
+    <header>
+      <div class="div-header-logo">
+        <img src="./assets/logo.png" alt="Logo" title="Consulta encomendas" />
+      </div>
+    </header>
+    <section>
+      <h4>Consulta sua encomenda</h4>
+      <div class="div-input-search">
+        <form>
+          <input
+            type="text"
+            placeholder="Digite o número do pedido"
+            title="Pesquisar um pedido"
+            id="numeroPedido"
+          />
+          <button type="button" id="search">
+            <img src="./assets/lupa.png" alt="Lupa" title="Pesquisar" />
+          </button>
+        </form>
+      </div>
+    </section>
+    <div class="div-spinner" id="spinner" style="display: none;">
+      <div class="spinner"></div>
+    </div>
+    <main>
+      <div class="main">
+        <div class="div-name-price">
+          <div class="div-name-date">
+            <h2 id="nameClient">1 - Nome do Cliente</h2>
+            <span>Número de ordem e nome do cliente</span>
+          </div>
+          <div class="div-date-order">
+            <h2 id="dateOrder">25/09/2018</h2>
+            <span>Data do pedido</span>
+          </div>
+        </div>
+        <div class="div-date-situation">
+          <div class="div-price-order">
+            <div class="price-order">
+              <h2 id="priceOrder">R$ 42,00</h2>
+              <span>Valor do pedido</span>
+            </div>
+          </div>
+          <div class="div-situation-order">
+            <h2 id="situationOrder">Entregue | Entregar</h2>
+            <span>Situação da encomenda</span>
+          </div>
+        </div>
+      </div>
+      <div class="main-alert-error">
+        <div>
+          <h2>Encomenda<br />não encontrada!</h2>
+          <h2>Procure novamente!</h2>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
