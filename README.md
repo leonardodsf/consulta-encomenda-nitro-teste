@@ -40,3 +40,5 @@
 /_ Coloque aqui os procedimentos para ambiente de produção _/
 
 > Comando para gerar a build: `npm run build`
+
+- A pasta /public/ é a pasta onde gera a build da aplicação. Nela está todo o conteúdo para ambiente de produção
